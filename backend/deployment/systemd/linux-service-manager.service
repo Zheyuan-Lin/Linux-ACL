@@ -1,0 +1,28 @@
+ [Unit]
+ Description=Linux ACL Manager service
+ After=network.target
+
+ [Service]
+# User=aclmanager
+# Group=aclmanager
+# WorkingDirectory=/opt/linux-acl-manager
+# ExecStart=/opt/linux-acl-manager/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+# Restart=on-failure
+# RestartSec=5s
+# # Security settings
+# PrivateTmp=true
+# ProtectSystem=full
+# NoNewPrivileges=true
+# # Give capability to use setfacl/getfacl
+# AmbientCapabilities=CAP_DAC_OVERRIDE
+# # Allow binding to port 8000
+# AmbientCapabilities=CAP_NET_BIND_SERVICE
+# # Environment variables
+# Environment=PYTHONUNBUFFERED=1
+# Environment=BASE_DIRECTORY=/data
+# Environment=LOG_LEVEL=INFO
+# Environment=LOG_FILE=/var/log/linux-acl-manager/app.log
+
+# [Install]
+ WantedBy=multi-user.target
+
